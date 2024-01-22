@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Récupérer le code depuis le repository Git
-                git 'https://github.com/eugenepascal/jenkins-test-euyaro.git'
+                // Récupérer le code depuis le repository Git sur une branche spécifique
+                git branch: 'main', url: 'https://github.com/eugenepascal/jenkins-test-euyaro.git'
             }
         }
         stage('Test') {
